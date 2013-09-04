@@ -1,0 +1,20 @@
+"Window": {
+	backgroundColor: "#000",
+}
+
+"#scrollableView":{
+	width:330,
+	showPagingControl:false,
+}
+
+".image":{
+	width: 320,
+	top:0
+}
+
+".content":{
+	width: 320,
+	bottom: 0,
+	color: "#fff",
+	zIndex: 2
+}

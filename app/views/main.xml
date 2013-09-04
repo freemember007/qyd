@@ -1,0 +1,11 @@
+<Alloy>
+	<Window>
+		<ScrollableView id="scrollableView" dataCollection="feeds">
+			<ScrollView>
+				<ImageView class="image" image="{image}"/>
+				<Label class="content" text="{content}"/>
+				<Label class="author" text="{author}"/>
+			</ScrollView>
+		</ScrollableView>
+	</Window>
+</Alloy>
