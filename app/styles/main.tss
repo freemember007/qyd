@@ -7,14 +7,49 @@
 	showPagingControl:false,
 }
 
-".image":{
+"#image":{
 	width: 320,
-	top:0
+	top:0,
+	preventDefaultImage:true
 }
 
-".content":{
-	width: 320,
+"#description":{
 	bottom: 0,
+	height: Titanium.UI.SIZE,
+	backgroundColor: "#90000000"
+}
+
+"#content":{
+	width: 320,
+	bottom: 45,
 	color: "#fff",
+	zIndex: 2
+}
+
+"#avatar":{
+	width: 30,
+	height: 30,
+	bottom: 4,
+	left: 5,
+	zIndex: 2,
+	borderRadius:15,
+	preventDefaultImage:true
+}
+
+"#author":{
+	height: 30,
+	bottom: 4,
+	left: 40,
+	font: {fontSize: 14},
+	color: "#ccc",
+	zIndex: 2
+}
+
+"#created_at":{
+	height: 30,
+	bottom: 4,
+	right: 5,
+	font: {fontSize: 14},
+	color: "#ccc",
 	zIndex: 2
 }

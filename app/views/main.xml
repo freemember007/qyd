@@ -1,11 +1,18 @@
 <Alloy>
 	<Window>
-		<ScrollableView id="scrollableView" dataCollection="feeds">
-			<ScrollView>
-				<ImageView class="image" image="{image}"/>
-				<Label class="content" text="{content}"/>
-				<Label class="author" text="{author}"/>
-			</ScrollView>
+		<ScrollableView id="scrollableView" dataCollection="feeds" onSingletap="toggleDesc">
+			<View>
+				<Require src="ActInd"/>
+				<ScrollView>
+					<ImageView id="image" image="{image}" onLoad="hideActInd"/>
+				</ScrollView>
+				<View id="description">
+					<Label id="content" text="{content}"/>
+					<ImageView id="avatar" image="{avatar}"/>
+					<Label id="author" text="{author}"/>
+					<Label id="created_at" text="{created_at}"/>
+				</View>
+			</View>
 		</ScrollableView>
 	</Window>
 </Alloy>

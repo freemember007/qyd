@@ -9,10 +9,26 @@ util.get(url, function(res) {
 				author: data[i].user.name,
 				avatar: data[i].user.profile_image_url,
 				content: data[i].text,
-				created_at: data[i].created_at
+				created_at: moment(data[i].created_at).fromNow()
 			});
 			Alloy.Collections.feeds.add(feed);
 		};
 	}
 	$.main.open();
 });
+
+var descHide = false;
+function toggleDesc(){
+	var desc = $.scrollableView.views[$.scrollableView.currentPage].children[2];
+	if(descHide == false){
+		desc.hide();
+		descHide = true;
+	}else{
+		desc.show();
+		descHide = false;
+	};
+}
+
+function hideActInd(){
+	$.scrollableView.views[$.scrollableView.currentPage].children[0].hide()
+}
