@@ -7,22 +7,20 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
+        backgroundColor: "#fff",
+        backgroundImage: "default.png",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.label = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        text: "Hello, index",
-        id: "label"
+    $.__views.actInd = Ti.UI.createActivityIndicator({
+        id: "actInd"
     });
-    $.__views.index.add($.__views.label);
+    $.__views.index.add($.__views.actInd);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    $.actInd.show();
     $.index.open();
-    Alloy.createController("main");
+    null == Ti.App.Properties.getString("token") || myDate.getTime() - Ti.App.Properties.getString("accessDate") > 7776e6 ? Alloy.createController("login") : Alloy.createController("main");
     _.extend($, exports);
 }
 

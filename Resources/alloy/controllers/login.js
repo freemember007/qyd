@@ -7,22 +7,20 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.login = Ti.UI.createWindow({
-        backgroundColor: "white",
+        backgroundColor: "#000",
         id: "login"
     });
     $.__views.login && $.addTopLevelView($.__views.login);
-    $.__views.label = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        text: "Hello, login",
-        id: "label"
+    $.__views.webView = Ti.UI.createWebView({
+        loading: true,
+        scalesPageToFit: true,
+        id: "webView",
+        url: "https://api.weibo.com/oauth2/authorize?client_id=2879718887&response_type=token&redirect_uri=https://api.weibo.com/oauth2/default.html&display=mobile"
     });
-    $.__views.login.add($.__views.label);
+    $.__views.login.add($.__views.webView);
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.login.open();
-    util.alert("欢迎！");
     _.extend($, exports);
 }
 

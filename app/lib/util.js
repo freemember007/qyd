@@ -50,3 +50,10 @@ exports.alert = function(message){
 		ok: "确定"
 	}).show();
 };
+
+exports.notify = function(message){
+	Ti.UI.createNotification({
+		message: message,
+		duration: Ti.UI.NOTIFICATION_DURATION_LONG
+	}).show();
+};

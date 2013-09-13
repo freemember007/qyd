@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label">Hello, login</Label>
+	<Window>
+		<WebView id="webView" url="https://api.weibo.com/oauth2/authorize?client_id=2879718887&response_type=token&redirect_uri=https://api.weibo.com/oauth2/default.html&display=mobile"/>
 	</Window>
 </Alloy>

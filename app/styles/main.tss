@@ -3,53 +3,70 @@
 }
 
 "#scrollableView":{
-	width:330,
+	width:"103%",
 	showPagingControl:false,
 }
 
-"#image":{
-	width: 320,
+"ScrollView":{
+	width: Ti.Platform.displayCaps.platformWidth,
+	contentWidth: Ti.Platform.displayCaps.platformWidth,
+}
+
+".image":{
+	width: Ti.Platform.displayCaps.platformWidth,
+	height: "auto",
 	top:0,
 	preventDefaultImage:true
 }
 
-"#description":{
+".description":{
 	bottom: 0,
-	height: Titanium.UI.SIZE,
-	backgroundColor: "#90000000"
-}
-
-"#content":{
-	width: 320,
-	bottom: 45,
-	color: "#fff",
+	width: Ti.Platform.displayCaps.platformWidth,
+	height: Ti.UI.SIZE,
+	backgroundColor: "#90000000",
 	zIndex: 2
 }
 
-"#avatar":{
+/*
+".content":{
+	left: 10,
+	right: 10,
+	bottom: 50,
+	font: {fontSize:Alloy.CFG.baseFont},
+	color: "#fff",
+	autoLink: 1,
+}
+*/
+
+".content":{
+	left: 10,
+	right: 10,
+	bottom: 50,
+	backgroundColor: "transparent",
+	enableZoomControls: false,
+}
+
+".avatar":{
 	width: 30,
 	height: 30,
-	bottom: 4,
-	left: 5,
-	zIndex: 2,
+	bottom: 5,
+	left: 10,
 	borderRadius:15,
 	preventDefaultImage:true
 }
 
-"#author":{
+".author":{
 	height: 30,
-	bottom: 4,
-	left: 40,
-	font: {fontSize: 14},
+	bottom: 5,
+	left: 50,
+	font: {fontSize: Alloy.CFG.smallFont},
 	color: "#ccc",
-	zIndex: 2
 }
 
-"#created_at":{
+".created_at":{
 	height: 30,
-	bottom: 4,
-	right: 5,
-	font: {fontSize: 14},
+	bottom: 5,
+	right: 10,
+	font: {fontSize: Alloy.CFG.smallFont},
 	color: "#ccc",
-	zIndex: 2
 }
