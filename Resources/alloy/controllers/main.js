@@ -43,6 +43,7 @@ function Controller() {
                 left: 10,
                 right: 10,
                 bottom: 50,
+                height: Ti.UI.SIZE,
                 backgroundColor: "transparent",
                 enableZoomControls: false,
                 html: "undefined" != typeof __alloyId2.__transform["content"] ? __alloyId2.__transform["content"] : __alloyId2.get("content")
@@ -85,7 +86,7 @@ function Controller() {
     }
     function transformFunction(model) {
         var transform = model.toJSON();
-        transform.content = '<html><head><meta name="viewport" content="user-scalable=0"></head><body><div style="color: #fff; line-height: 150%">' + transform.content.replace(/http:\/\/t\.cn\/[a-zA-Z0-9]{4,7}/g, "<a style='color: #880000' href='$&' target='_blank'>$&</a>") + "</div></body></html>";
+        transform.content = '<!DOCTYPE html><html"><head><meta name="viewport" content="width=device-width, user-scalable=no"></head><body><div style="color: #fff; line-height: 150%; font-size:15px">' + transform.content.replace(/http:\/\/t\.cn\/[a-zA-Z0-9]{4,7}/g, "<a style='color: #880000' href='$&' target='_blank'>$&</a>") + "</div></body></html>";
         return transform;
     }
     function toggleDesc() {

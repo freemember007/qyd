@@ -20,7 +20,7 @@ function Controller() {
     _.extend($, $.__views);
     $.actInd.show();
     $.index.open();
-    null == Ti.App.Properties.getString("token") || myDate.getTime() - Ti.App.Properties.getString("accessDate") > 7776e6 ? Alloy.createController("login") : Alloy.createController("main");
+    Alloy.createController("main");
     _.extend($, exports);
 }
 

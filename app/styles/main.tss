@@ -24,7 +24,7 @@
 	width: Ti.Platform.displayCaps.platformWidth,
 	height: Ti.UI.SIZE,
 	backgroundColor: "#90000000",
-	zIndex: 2
+	zIndex: 2,
 }
 
 /*
@@ -42,6 +42,7 @@
 	left: 10,
 	right: 10,
 	bottom: 50,
+	height: Ti.UI.SIZE,
 	backgroundColor: "transparent",
 	enableZoomControls: false,
 }

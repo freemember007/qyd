@@ -40,7 +40,7 @@ function transformFunction(model) {
 	// blob = null;
 	// var temp = doT.template(contentText);
 	// alert(temp());
-    transform.content = '<html><head><meta name="viewport" content="user-scalable=0"></head><body><div style="color: #fff; line-height: 150%">' + transform.content.replace(/http:\/\/t\.cn\/[a-zA-Z0-9]{4,7}/g, "<a style='color: #880000' href='$&' target='_blank'>$&</a>") + '</div></body></html>';
+    transform.content = '<!DOCTYPE html><html"><head><meta name="viewport" content="width=device-width, user-scalable=no"></head><body><div style="color: #fff; line-height: 150%; font-size:15px">' + transform.content.replace(/http:\/\/t\.cn\/[a-zA-Z0-9]{4,7}/g, "<a style='color: #880000' href='$&' target='_blank'>$&</a>") + '</div></body></html>';
     return transform;
 }
 
